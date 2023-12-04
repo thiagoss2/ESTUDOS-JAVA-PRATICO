@@ -3,5 +3,7 @@
     "java.project.outputPath": "bin",
     "java.project.referencedLibraries": [
         "lib/**/*.jar"
-    ]
+    ],
+    "workbench.settings.useSplitJSON": false,
+    "terminal.integrated.shell.windows":"C:\\Program Files\\Git\\git-bash.exe"
 }
