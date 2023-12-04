@@ -22,6 +22,8 @@ public class TestaContato {
 
         }
 
+        contato.ligarPara("Andre");
+
     }
 
 }
