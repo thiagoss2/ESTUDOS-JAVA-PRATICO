@@ -8,6 +8,7 @@ public class Contato {
     private String nome;
     private String numeroCelular;
     private List<Contato> contatos;
+    private List<Contato> contatosRecentes = new ArrayList<>();
 
     Contato(String nome, String numeroCelular) {
         this.nome = nome;
@@ -37,21 +38,39 @@ public class Contato {
 
     }
 
+    public void setContatosRecentes(Contato contato) {
+        contatosRecentes.add(contato);
+    }
+
+    public List<Contato> getContatosRecentes() {
+        return this.contatosRecentes;
+    }
+
     public List<Contato> getContatos() {
         return this.contatos;
     }
 
+    public void imprimeContatosRecentes() {
+        for (Contato contato : getContatosRecentes()) {
+            System.out.println("Nome: " + contato.getNome() + "\n" +
+                    "Celular: " + contato.getNumeroCelular());
+        }
+    }
+
     public void imprimeLista(List<Contato> contatos) {
+        System.out.println("LISTA DE CONTATOS" + "\n" + "==================");
         for (Contato contato : contatos) {
-            System.out.println("Nome do contato " + contato.getNome() + "\n" +
-                    " Celular do contato" + contato.getNumeroCelular());
+            System.out.println(contato.getNome() + ":" + "\n" +
+                    "Celular: " + contato.getNumeroCelular() + "\n");
         }
     }
 
     public void ligarPara(String nome) {
         for (Contato contato : this.getContatos()) {
             if (nome.equals(contato.getNome())) {
-                System.out.println("Ligando para ... " + contato.getNome() + " " + contato.getNumeroCelular());
+                System.out.println("Voce ligou para: " + contato.getNome() + "\n" +
+                        "Celular: " + contato.getNumeroCelular());
+                this.setContatosRecentes(contato);
             }
         }
     }
