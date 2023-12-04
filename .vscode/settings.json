@@ -5,5 +5,7 @@
         "lib/**/*.jar"
     ],
     "workbench.settings.useSplitJSON": false,
-    "terminal.integrated.shell.windows":"C:\\Program Files\\Git\\git-bash.exe"
+    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\git-bash.exe",
+    "explorer.compactFolders": false,
+    "editor.fontWeight": "600"
 }

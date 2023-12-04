@@ -1,4 +1,4 @@
-package com.estudos.mundojava.DLSinterna;
+package br.com.estudos.mundojava.dls_interna;
 
 import java.util.List;
 
@@ -8,18 +8,15 @@ public abstract class TestaCliente {
 
     public static void main(String[] args) {
 
-    
-
         Video vd = new Video("A bruxa de Blair");
         List<Video> videos = new ArrayList<>();
         videos.add(vd);
 
-        Cliente cli = new Cliente("394-588-599-77" ,"Joao" );
+        Cliente cli = new Cliente("394-588-599-77", "Joao");
 
         Locacao lc = new Locacao(cli);
 
-         Locacao lc2 = Locacao.para(cli);
-        
+        Locacao lc2 = Locacao.para(cli);
 
         lc.setRelacaoVideo(videos);
 
@@ -27,7 +24,4 @@ public abstract class TestaCliente {
 
     }
 
-
-
-    
 }

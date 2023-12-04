@@ -1,4 +1,4 @@
-package br.com.app;
+package com.br.estudos.app;
 
 import java.util.ArrayList;
 import java.util.List;
