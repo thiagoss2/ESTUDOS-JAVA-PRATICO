@@ -71,6 +71,7 @@ public class Contato {
                 System.out.println("Voce ligou para: " + contato.getNome() + "\n" +
                         "Celular: " + contato.getNumeroCelular());
                 this.setContatosRecentes(contato);
+                break;
             }
         }
     }
